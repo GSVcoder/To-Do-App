@@ -1,6 +1,7 @@
 var taskTxt = document.querySelector("#taskTxt");
 var ulNotesDiv = document.querySelector(".ulNotesDiv");
 
+// Add new to to with ENTER
 taskTxt.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     if (taskTxt.value === "") {
@@ -12,6 +13,7 @@ taskTxt.addEventListener("keypress", function (event) {
   }
 });
 
+// Create note and add
 function createNote() {
   const li = document.createElement("li");
   li.classList.add("liNotesDiv");
@@ -25,12 +27,12 @@ function createNote() {
   ulNotesDiv.append(li);
 }
 
+// Mark completed/uncompleted
 ulNotesDiv.addEventListener("click", (e) => {
   if (
     e.target.parentElement.classList.contains("liNotesDiv") &&
     e.target.classList.contains("checkbox")
   ) {
-    console.log(e.target.nextElementSibling.style);
     if (e.target.checked === true) {
       e.target.parentElement.style.color = "red";
       e.target.parentElement.style.textDecoration = "line-through white 2px";
@@ -42,6 +44,7 @@ ulNotesDiv.addEventListener("click", (e) => {
   }
 });
 
+// Delete Note
 ulNotesDiv.addEventListener("dblclick", (e) => {
   if (
     e.target.parentElement.classList.contains("liNotesDiv") &&
