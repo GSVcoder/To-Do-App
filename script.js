@@ -20,10 +20,13 @@ function createNote() {
   const checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
   checkbox.classList.add("checkbox");
+  const span = document.createElement("span");
+  span.textContent = taskTxt.value;
+  span.classList.add("checkbox");
   const delBtn = document.createElement("button");
   delBtn.classList.add("removeBtn");
   delBtn.textContent = "X";
-  li.append(checkbox, taskTxt.value, delBtn);
+  li.append(checkbox, span, delBtn);
   ulNotesDiv.append(li);
 }
 
@@ -33,13 +36,13 @@ ulNotesDiv.addEventListener("click", (e) => {
     e.target.parentElement.classList.contains("liNotesDiv") &&
     e.target.classList.contains("checkbox")
   ) {
+    console.log(e.target.nextSibling);
     if (e.target.checked === true) {
-      e.target.parentElement.style.color = "red";
-      e.target.parentElement.style.textDecoration = "line-through white 2px";
-      e.target.nextElementSibling.style.textDecoration = "none";
+      e.target.nextSibling.style.color = "red";
+      e.target.nextSibling.style.textDecoration = "line-through white 2px";
     } else if (e.target.checked === false) {
-      e.target.parentElement.style.color = "white";
-      e.target.parentElement.style.textDecoration = "none";
+      e.target.nextSibling.style.color = "white";
+      e.target.nextSibling.style.textDecoration = "none";
     }
   }
 });
