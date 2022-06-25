@@ -1,5 +1,5 @@
 ## Description
-To do app with create, delete and mark as check funcionalies
+A simple to do application with the simple premise of create some to do tasks
 
 ## Built with;
 - HTML
