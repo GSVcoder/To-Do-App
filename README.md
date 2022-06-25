@@ -3,7 +3,7 @@ A simple to do application with the simple premise of create some to do tasks
 
 ## Built with;
 - HTML
-- Scss
+- Css
 - JavaScript
 
 ## Funcionalities
