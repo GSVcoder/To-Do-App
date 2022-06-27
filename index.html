@@ -26,11 +26,39 @@
       <section class="toDo" id="toDo">
         <div class="titleDiv">
           <h1>TODO</h1>
+          <h1 class="h1">Info</h1>
           <img src="/images/icon-moon.svg" class="img" />
         </div>
         <div class="addNoteDiv">
           <input type="text" id="taskTxt" placeholder="Task..." />
+          <div class="inputsTimeDiv">
+            <div class="one">
+              <label class="lbl1">Date:</label>
+              <input type="date" id="date" />
+            </div>
+            <div class="two">
+              <label style="margin-top: 2vh">Hour of the day:</label>
+              <input
+                type="number"
+                min="0"
+                max="24"
+                id="time"
+                placeholder="Example: 20:30"
+              />
+            </div>
+          </div>
         </div>
+        <div
+          style="
+            margin-top: 5vh;
+            margin-bottom: 2vh;
+            width: 70%;
+            height: 1vh;
+            background-color: rgba(81, 93, 146, 1);
+            display: flex;
+            align-self: center;
+          "
+        ></div>
         <div class="notesDiv">
           <ul class="ulNotesDiv"></ul>
         </div>

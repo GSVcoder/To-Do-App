@@ -1,5 +1,7 @@
 var taskTxt = document.querySelector("#taskTxt");
 var ulNotesDiv = document.querySelector(".ulNotesDiv");
+let date = document.querySelector("#date");
+let time = document.querySelector("#time");
 
 // Add new to to with ENTER
 taskTxt.addEventListener("keypress", function (event) {
@@ -28,6 +30,7 @@ function createNote() {
   delBtn.textContent = "X";
   li.append(checkbox, span, delBtn);
   ulNotesDiv.append(li);
+  dateAndTime();
 }
 
 // Mark completed/uncompleted
@@ -56,3 +59,9 @@ ulNotesDiv.addEventListener("dblclick", (e) => {
     e.target.parentElement.remove();
   }
 });
+
+// Get input of date and time
+function dateAndTime() {
+  console.log(date.value);
+  console.log(time.value);
+}
