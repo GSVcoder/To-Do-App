@@ -62,6 +62,14 @@ ulNotesDiv.addEventListener("dblclick", (e) => {
 
 // Get input of date and time
 function dateAndTime() {
-  console.log(date.value);
-  console.log(time.value);
+  if (date.value === "") {
+    return null;
+  } else if (date.value !== "") {
+    console.log(date.value);
+  }
 }
+
+// Animations
+gsap.from(".header", { delay: 1, duration: 1, y: "-100%", ease: "bounce" });
+gsap.from(".middle", { duration: 1, y: "-100%", ease: "bounce" });
+gsap.from(".toDo", { delay: 2, duration: 1, y: "-200%", ease: "bounce" });

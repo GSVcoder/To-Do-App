@@ -147,6 +147,7 @@ body {
 
 .inputsTimeDiv {
   display: flex;
+  justify-content: center;
 }
 
 .one,
